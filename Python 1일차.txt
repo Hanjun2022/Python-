@@ -1,0 +1,29 @@
+from random import *
+
+// random 으로 값을 출력하는 거
+# print(random())
+# print(random()*10)
+# print(int(random()*10))
+// 0부터 10까지
+# print(int(random()*10)) 
+//1부터 11까지
+# print(1+int(random())*10)
+
+
+print(int(random()*45)+1)
+
+# 1부터 45까지 출력 양쪽 다 포함이 됨 
+print(randint(1,45))
+
+
+#슬라이싱 기능 
+jumin="990120-1234567"
+print("성별 :"+jumin[7]) 7번째 자리 문자열
+print("연: "+jumnin[0:2]) 2번쨰 인덱스 전까지
+print("월:"+jumin[2:4])
+print("일:"+jumin[4:6])
+
+print("생년월일"+jumin[:6]) # 앞에 5개
+print("뒤 7자리"+jumin[7:]) #뒤 7자리 
+print("뒤 7자리 (뒤에부터)"+jumin[-7:])
+# 맨 뒤에 7번쨰부터 끝까지 
