@@ -1,0 +1,23 @@
+#temp=int(input("오늘 날씨어때요\n"))
+
+# 조건문 
+# if 30<=temp:
+#     print("너무 더워요 썬크림 바르세요")
+# elif 10<= temp and temp<30:
+#     print("괜찮은 날씨예요")
+# elif 0<= temp <10:
+#     print("외투를 챙기세요")
+# else:
+#     print("너무 추워요 나가지 마세요")
+
+# and 나 or 이 중요하다. 
+
+# for 반복문
+# for waiting_no in [0,1,2,3,4]:
+#     print("대기번호 : {0}".format(waiting_no))
+
+# people =["아이언맨","토르","아이엠 그루트"]
+
+# for peo in people:
+#     print("{0}, 커피 준비 되었습니다.".format(peo))
+

@@ -1,0 +1,26 @@
+#문자열 처리 
+
+python="Python is Amazing"
+print(python.lower())
+print(python.upper())
+# 앞에 첫글자가 대문자이니
+print(python[0].isupper())
+print(len(python))
+print(python.replace("Python","JAVA"))
+
+
+index=python.index("n")
+print(index)
+# n 다음 자리에 위치한 또다른 n은 무엇인가
+index=python.index("n",index+1)
+print(index)
+
+# find 는 문자열에 값이 없으면 -1을 낸다.
+print(python.find("Java"))
+
+#index에 값이 없으면 에러를 낸다.
+#print(python.index("Java"))
+print("hi")
+
+# n의 갯수를 출력을 한다. 
+print(python.count("n"))

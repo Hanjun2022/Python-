@@ -1,0 +1,51 @@
+import sys
+input=sys.stdin.readline
+
+print("a"+"b")
+# ab
+print("a","b")
+#a b 
+print("나는 %d 살입니다."%20)
+# d는 정수입니다.
+print ("나는 %s 살입니다." %"서진이")
+# s 는 문자열이다.
+print("Apple은 %c 살입니다."%"c")
+# c는 문자하나이다. %s는 상관없이 다 들어감 
+print("나는 %s 색과 %s 색을 좋아합니다." %("파란","빨간"))
+
+
+# 방법 2  .format(순서 지정 가능)
+print("나는 {} 살입니다.".format(20))
+print("나는 {} 살입니다. {} 을 좋아합니다.".format(20,"학교"))
+print("나는 {0} 살입니다. {1} 을 좋아합니다.".format(20,"학교"))
+print("나는{1} 을 좋아합니다.  {0} 살입니다. ".format(20,"학교"))
+
+
+#방법3 
+# 변수를 이용하여 
+print("나는 {age}살이며 , {color} 색을 좋아해요.".format(age=20,color="빨강"))
+
+
+# 방법4 파이썬 3.6이상에서 적용이다. 
+age=20
+color="빨강"
+print(f"나는 {age}살이며 {color}색을 좋아합니다.")
+
+
+# \n 은 문장 내에서 줄바꿈
+print("백문이 불여일견 \n 백견이 불여일타")
+
+# \" \"는 ""를 문장내에서 출력하도록 돕는다. ''도 포함이다.
+print("저는 \" 나도코딩 \" 입니다.")
+print("저는 \'나도코딩 \' 입니다. ")
+
+# \\ :문장 내에서
+print("https:\\www.mycompiler.io\\ko\\new\\python")
+print("Apple Coding\rGood")
+
+# \t : 탭
+print("Red\tHook")
+
+
+
+

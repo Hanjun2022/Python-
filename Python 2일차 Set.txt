@@ -1,0 +1,26 @@
+my_set={1,2,3,4,3,5}
+print(my_set)
+
+java=set(["한준","태호","송강"])
+python={"한준","송강"}
+
+# 교집합 & ,intersection 
+print(java & python)
+print(java.intersection(python))
+
+
+# 합집합 (둘다 할수 있는 개발자)
+print(java | python)
+print(java.union(python))
+
+#차집합(자바는 할 수 있지만 파이썬은 못함)
+print(java-python)
+print(java.differenct(python))
+
+
+# Set 자료구조에서 add, remove 
+python.add("태호리")
+print(python)
+
+java.remove("태호")
+print(java)
