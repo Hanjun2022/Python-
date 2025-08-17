@@ -1,0 +1,119 @@
+# name,damage="항공대",100
+
+# def attack(name,location,damage):
+#     print("{0} ,{1} 방향으로 적군을 공격합니다. [공격력 {2}]".format( \
+#     name,location,damage))
+
+# attack(name,"1시",500)
+
+#  클래스도 하나의 틀이다. 
+
+class Unit:
+    def __init__(self,name,hp):
+        self.name=name
+        self.hp=hp
+        # self.damage=damage 
+        # print("{0} 유닛이 생성되었습니다.".format(self.name))
+        # print("체력: {0}, 공격력: {1}".format(self.hp,self.damage))
+
+
+## (상속대상) def 상속대상__init__(속성들)
+
+class AttackUnit(Unit):
+    def __init__(self,name,hp,damage):
+        Unit.__init__(self,name,hp)
+        self.damage=damage
+    def attack(self,location):
+        print("{0} :{1} 방향으로 적군을 공격합니다."\
+             .format(self.name,location))
+    def damaged(self,damage):
+        print("{0} : {1} 데미지를 입었습니다. ".format(self.name,self.damage))
+        self.hp-=damage
+        print("{0} : 현재 체력은 {1} 입니다.".format(self.name,self.hp))
+        if self.hp<=0:
+            print("{0} : 파괴되었습니다.".format(self.name))
+            
+# firebat1= AttackUnit("파이어뱃",50,10)
+# firebat1.attack("10시")
+
+# class Flybit:
+#     def __init__(self,flying_speed):
+#         self.flying_speed=flying_speed
+# marine1= Unit("마린",40,5)
+# marine2=Unit("마린2",40,5)
+# tank=Unit("탱크",150,35)
+
+
+# 다중 상속
+
+
+
+# 처음 객체 정의 파라미터 갯수만큼 정의를 해 주어야 한다.  여기서 에러가난다. 
+# marine3=Unit("마린3")
+# wraith=Unit("레이스",80,5)
+# print("레이스의 이름은 : {0} , 레이스의 체력은 {1} , 레이스의 공격력은 {2}".format(wraith.name,wraith.hp,wraith.damage))
+
+
+# super().__init__ 은 Unit.
+
+class BuildingUnit(Unit):
+    def __init__(self,name,hp,location):
+        super.__init__(name,hp,0)
+        self.location=location 
+
+
+# supply_port=BuildingUnit("서플라이 디폿",500,"7시")
+
+# def game_start():
+#     print("[알림] 새로운 게임을 시작합니다.")
+# def game_over():
+#     pass
+
+# game_start()
+# game_over()
+
+class Unit:
+     def __init__(self,name,hp,speed):
+        self.name=name
+        self.hp=hp
+        self.speed=speed
+     def move(self,location):
+         print("지상 이동")
+         print("{0} : {1} 방향으로 이동합니다. [속도 {2}]"\
+              .format(self.name,location,self.speed))
+         
+        
+class Flyable:
+    def __init__(self,flying_speed):
+        self.flying_speed=flying_speed
+    def fly(self,name,location):
+        print("{0} : {1} 방향으로 날아갑니다. [속도 {2}]"\
+              .format(name,location,self.flying_speed))
+
+class AttackUnit(Unit):
+    def __init__(self,name,hp,speed,damage):
+        Unit.__init__(self,name,hp,speed)
+        self.damage=damage 
+    
+
+# 다중 상속인 경우 맨 처음 상속받는 것에 함수를 호출한다. 
+# class FlyableUnit2(Flyable,Unit):
+#     def __init__(self):
+#         # super().__init__()
+#         # super().attack()
+#         Unit.__init__(self)
+#         Flyable.__init__(self)
+
+class FlyandUnit(Flyable,Unit):
+        def __init__(self,name,hp,speed,damage,flying_speed):
+            Unit.__init__(self,name,hp,speed)
+            Flyable.__init__(self,flying_speed)
+       
+
+vulture=AttackUnit("벌쳐",80,10,20)
+    
+vulture.move("11시")
+        
+
+
+

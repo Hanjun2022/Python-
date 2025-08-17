@@ -1,0 +1,106 @@
+# ## 기본 값 설정을 한다. 
+# def profile(name,age=20,main_lang="파이썬"):
+#     print("이름:{0}\t 나이: {1}\t 주 사용 언어:{2}"\
+#          .format(name,age,main_lang))
+
+# profile("전한준",20,"백엔드")
+# profile("김누리")
+
+# #키워드 값
+# def profile(name,age,main_lang):
+#     print(name,age,main_lang)
+
+# profile(name="알렉산더왕",main_lang="랭체인",age=29)
+
+
+# # 가변인자 
+# end=" " 여기서 이어서 쓴다. 
+#,end=" " 줄바꿈을 하지 않겠다. 
+# def profile(name,age,lang1,lang2,lang3):
+#     print("이름: {0} \t 나이 : {1}\t" .format(name,age),end=" ")
+#     print(lang1,lang2,lang3)
+# # 이렇게 쓰는 거 무리가 있다. 
+    
+# profile("전한준",27,"Python","Java","C")
+
+
+# 함수 내에서 사용 지역 전역 변수 
+# gun=10
+# def checkpoint(soldiers):
+#     global gun 
+#     gun=gun -soldiers
+#     print("[함수 내] 남은 총: {0}".format(gun))
+
+# checkpoint(2)
+
+# def checkpoint_ret(gun,soldiers):
+#     gun=gun-soldiers
+#     print("[함수 내] 남은 총: {0}".format(gun))
+#     return gun
+
+# print("전체 총 :{0}".format(gun))
+# gun=checkpoint_ret(gun,2)
+
+# def std_weight(height,gender):
+#     if gender=="남":
+#         return height*height*22
+#     else:
+#         return height*height*21
+
+# round () 반올림함수 
+# print(std_weight(1.2,"남"))
+# print(round(std_weight(1.3,"여"),1))
+# print("Python","Java","Javascript",sep=" vs ")
+
+# end는 문장의 끝부분을 줄 바꾸기가 아닌 다른걸로 바꾸어줘
+# print("Python","Java",sep=",",end="?")
+# print("무엇이 더 재미있을까요")
+
+# import sys
+# print("Python","Java",file=sys.stdout)
+# print("Python","Java",file=sys.stderr)
+
+# def int_format(score,grade):
+#     print("Your score is {0} Your grade is {1}".format(score,grade))
+#     return score,grade
+
+# S,G=int_format(100,"C")
+# print("S : {0} G :{1}".format(S,G))
+
+#score={"수학":0,"영어":100,"국어":50}
+# del score["수학"]
+# print(score)
+
+# ljust 왼쪽 정렬 rjust 오른쪽 정렬 sep 문자 사이에 무엇을 넣을 것인가?
+# for subject,score in score.items():
+#     print(subject,score,end=" ")
+#     print(subject.ljust(8),str(score).rjust(4),sep=":")
+# import sys
+
+# 은행 대기 순번표 
+# for num in range(1,21):
+#     print("대기 번호: "+str(num).zfill(3))
+
+# answer=input("아무 값이나 입력하세요: ")
+# print(type(answer))
+
+# 오른쪽 10자리 정렬 
+# print("{0: >10}".format(500))
+# 양수일때 +로 표시, 음수일 때 - 로 표시 
+# print("{0: >+10}".format(500))
+# print("{0: >+10}".format(-1000))
+
+# 왼쪽 정렬하고 , 빈칸으로 _ 로 채움 
+# print("{0:_<+10}".format(-1500))
+# 3자리마다 콤마를 찍어주기
+# print("{0:,}".format(100000000000))
+# 3자리 마다 콤마를 찍어주기 , 부호도 붙이고, 자릿수 확보하기
+# 돈이 많으면 행복하니까 빈 자리는 ^ 로 채워주기
+# print("{0:^<+30,}".format(1000000000000))
+
+# print("{0:f}".format(5/3))
+# print("{0:2f}".format(9/4))
+
+# 파일 입출력 open ,pickle 등등 
+
+
